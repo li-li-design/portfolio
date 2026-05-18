@@ -95,6 +95,20 @@ button {
   color: #c73674;
 }
 
+.desktop-nav a.router-link-active,
+.footer-nav a.router-link-active,
+.mobile-nav a.router-link-active {
+  color: #c73674;
+}
+
+.desktop-nav a:not(.contact-link).router-link-active,
+.footer-nav a.router-link-active,
+.mobile-nav a:not(.contact-link).router-link-active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
 .contact-link {
   display: inline-flex;
   align-items: center;
@@ -108,6 +122,11 @@ button {
 
 .contact-link:hover {
   background: #287833;
+}
+
+.contact-link.router-link-active {
+  background: #c73674;
+  color: #ffffff !important;
 }
 
 .icon-button {

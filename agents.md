@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is LiLi Koeber's portfolio landing page, built with Vue 3, Vite, and Vuetify.
+This is LiLi Koerber's portfolio landing page, built with Vue 3, Vite, and Vuetify.
 
 The current landing page implementation lives mostly in:
 
@@ -71,7 +71,7 @@ This matters because the app is served from `/portfolio/` on GitHub Pages.
 - The hero artwork was generated with the built-in image generation tool and copied into `public/hero-lili.png`.
 - The portfolio grid currently uses styled tiles and a CSS mockup for SMARTCharts rather than real case-study screenshots.
 - Footer social URLs are placeholders except for the email shape:
-  - `mailto:hello@lilikoeber.com`
+  - `mailto:hello@liliKoerber.com`
   - `https://www.linkedin.com`
   - `https://www.instagram.com`
   - `https://www.facebook.com`

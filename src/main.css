@@ -400,14 +400,20 @@ button {
 .about-content {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
-  gap: 66px;
-  align-items: start;
+  gap: 36px;
+  align-items: stretch;
 }
 
 .about-stack,
 .about-travel {
   display: grid;
   gap: 16px;
+}
+
+.about-body {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
 }
 
 .about-photo {
@@ -445,7 +451,8 @@ button {
 
 .about-travel {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 18px;
+  margin-top: auto;
+  padding-top: 18px;
 }
 
 .about-travel .about-photo {
@@ -515,6 +522,9 @@ button {
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  color: #181313;
+  cursor: pointer;
+  padding: 0;
   transition:
     transform 160ms ease,
     background 160ms ease;

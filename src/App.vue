@@ -8,9 +8,10 @@ import {
   MessageCircle,
   X,
 } from "@lucide/vue";
-import { ref } from "vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 
 const mobileNavOpen = ref(false);
+const showBackToTop = ref(false);
 
 const navItems = [
   { label: "Work", to: { name: "home", hash: "#work" } },
@@ -28,6 +29,28 @@ const socialLinks = [
 function closeMobileNav() {
   mobileNavOpen.value = false;
 }
+
+function updateBackToTopVisibility() {
+  showBackToTop.value = window.scrollY > 320;
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+onMounted(() => {
+  updateBackToTopVisibility();
+  window.addEventListener("scroll", updateBackToTopVisibility, {
+    passive: true,
+  });
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", updateBackToTopVisibility);
+});
 </script>
 
 <template>
@@ -118,9 +141,15 @@ function closeMobileNav() {
           </nav>
         </footer>
 
-        <a class="back-to-top" href="#top" aria-label="Back to top">
+        <button
+          v-show="showBackToTop"
+          class="back-to-top"
+          type="button"
+          aria-label="Back to top"
+          @click="scrollToTop"
+        >
           <ArrowUp :size="20" stroke-width="2" />
-        </a>
+        </button>
       </div>
     </v-main>
   </v-app>

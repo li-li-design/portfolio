@@ -459,6 +459,138 @@ button {
   aspect-ratio: 0.66 / 1;
 }
 
+.resume-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 154px 68px 78px;
+  color: #050505;
+}
+
+.resume-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.resume-wordmark {
+  display: inline-flex;
+  gap: 7px;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+.resume-wordmark span:last-child {
+  color: #e880af;
+}
+
+.resume-role {
+  margin: 14px 0 0;
+  color: #9a9a9a;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.resume-contact {
+  display: grid;
+  gap: 20px;
+  padding-top: 18px;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.resume-contact a:hover {
+  color: #c73674;
+}
+
+.resume-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 56px;
+}
+
+.resume-page h1 {
+  margin: 0 0 22px;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.resume-page h2 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.resume-company,
+.resume-dates {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.resume-dates {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.resume-entry {
+  margin-bottom: 34px;
+}
+
+.resume-entry:last-child {
+  margin-bottom: 0;
+}
+
+.resume-entry ul {
+  margin: 10px 0 0;
+  padding-left: 24px;
+}
+
+.resume-entry li {
+  margin: 0 0 5px;
+  padding-left: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.resume-sidebar {
+  display: grid;
+  align-content: start;
+  gap: 58px;
+  padding-top: 72px;
+}
+
+.resume-sidebar h1 {
+  margin-bottom: 20px;
+}
+
+.resume-sidebar h2 {
+  text-decoration: none;
+}
+
+.resume-list {
+  display: grid;
+  gap: 21px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resume-list li {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: 1fr 360px;
@@ -614,6 +746,25 @@ button {
     padding: 12px 28px 72px;
   }
 
+  .resume-page {
+    padding: 112px 34px 64px;
+  }
+
+  .resume-header,
+  .resume-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .resume-contact,
+  .resume-sidebar {
+    padding-top: 0;
+  }
+
+  .resume-sidebar {
+    gap: 38px;
+  }
+
   .footer-nav {
     max-width: 340px;
     padding-top: 0;
@@ -671,5 +822,21 @@ button {
     width: 48px;
     height: 48px;
     right: 18px;
+  }
+
+  .resume-page {
+    padding: 104px 24px 54px;
+  }
+
+  .resume-wordmark {
+    font-size: 38px;
+  }
+
+  .resume-role {
+    font-size: 21px;
+  }
+
+  .resume-page h1 {
+    font-size: 25px;
   }
 }

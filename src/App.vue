@@ -9,14 +9,16 @@ import {
   X,
 } from "@lucide/vue";
 import { onBeforeUnmount, onMounted, ref } from "vue";
+import { useRoute } from "vue-router";
 
 const mobileNavOpen = ref(false);
 const showBackToTop = ref(false);
+const route = useRoute();
 
 const navItems = [
   { label: "Work", to: { name: "home", hash: "#work" } },
   { label: "About", to: { name: "about" } },
-  { label: "Resume", href: "#resume" },
+  { label: "Resume", to: { name: "resume" } },
 ];
 
 const socialLinks = [
@@ -135,7 +137,7 @@ onBeforeUnmount(() => {
 
           <nav class="footer-nav" aria-label="Footer">
             <RouterLink :to="{ name: 'home', hash: '#work' }">Work</RouterLink>
-            <a href="#resume">Resume</a>
+            <RouterLink :to="{ name: 'resume' }">Resume</RouterLink>
             <RouterLink :to="{ name: 'about' }">About</RouterLink>
             <a href="#contact">Contact</a>
           </nav>

@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import AboutPage from "./views/AboutPage.vue";
+import ContactPage from "./views/ContactPage.vue";
 import HomePage from "./views/HomePage.vue";
 import ResumePage from "./views/ResumePage.vue";
 
@@ -20,6 +21,11 @@ const router = createRouter({
       path: "/resume",
       name: "resume",
       component: ResumePage,
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: ContactPage,
     },
   ],
   scrollBehavior(to) {

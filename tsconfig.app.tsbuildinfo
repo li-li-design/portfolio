@@ -1,1 +1,1 @@
-{"root":["./src/vite-env.d.ts","./src/app.vue","./src/background/background.vue","./src/components/helloworld.vue","./src/views/aboutpage.vue","./src/views/homepage.vue","./src/views/resumepage.vue"],"version":"5.6.2"}
+{"root":["./src/vite-env.d.ts","./src/app.vue","./src/background/background.vue","./src/components/helloworld.vue","./src/views/aboutpage.vue","./src/views/contactpage.vue","./src/views/homepage.vue","./src/views/resumepage.vue"],"version":"5.6.2"}

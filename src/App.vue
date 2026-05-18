@@ -75,7 +75,9 @@ onBeforeUnmount(() => {
               </RouterLink>
               <a v-else :href="item.href">{{ item.label }}</a>
             </template>
-            <a class="contact-link" href="#contact">Contact</a>
+            <RouterLink class="contact-link" :to="{ name: 'contact' }">
+              Contact
+            </RouterLink>
           </nav>
 
           <button
@@ -105,9 +107,13 @@ onBeforeUnmount(() => {
               {{ item.label }}
             </a>
           </template>
-          <a class="contact-link" href="#contact" @click="closeMobileNav">
+          <RouterLink
+            class="contact-link"
+            :to="{ name: 'contact' }"
+            @click="closeMobileNav"
+          >
             Contact
-          </a>
+          </RouterLink>
         </nav>
 
         <RouterView />
@@ -139,7 +145,7 @@ onBeforeUnmount(() => {
             <RouterLink :to="{ name: 'home', hash: '#work' }">Work</RouterLink>
             <RouterLink :to="{ name: 'resume' }">Resume</RouterLink>
             <RouterLink :to="{ name: 'about' }">About</RouterLink>
-            <a href="#contact">Contact</a>
+            <RouterLink :to="{ name: 'contact' }">Contact</RouterLink>
           </nav>
         </footer>
 
